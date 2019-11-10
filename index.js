@@ -44,7 +44,7 @@ keystone.createList('User', {
   },
   // To create an initial user you can temporarily remove access controls
   access: {
-    read: access.userIsAdminOrOwner,
+    read: true,
     update: access.userIsAdminOrOwner,
     create: access.userIsAdmin,
     delete: access.userIsAdmin,

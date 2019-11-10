@@ -9,7 +9,9 @@
     "node": ">=8.4.0"
   },
   "scripts": {
+    "client": "yarn start",
     "dev": "cross-env NODE_ENV=development DISABLE_LOGGING=true keystone dev",
+    "both": "concurrently \"yarn dev\" \"cd client && yarn start\"",
     "build": "cross-env NODE_ENV=production keystone build",
     "start": "cross-env NODE_ENV=production keystone start"
   },
@@ -21,6 +23,7 @@
     "@keystonejs/auth-password": "^5.0.0",
     "@keystonejs/fields": "^5.0.0",
     "@keystonejs/keystone": "^5.0.0",
+    "concurrently": "5.0.0",
     "cross-env": "^5.2.0",
     "webpack": "4.41.0"
   }
