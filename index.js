@@ -7,7 +7,7 @@ const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
 const { StaticApp } = require('@keystonejs/app-static');
 
 
-const PROJECT_NAME = "aaron-keystone-demo";
+const PROJECT_NAME = "cra-keystone5-mongodb";
 
 
 const keystone = new Keystone({
@@ -62,10 +62,11 @@ module.exports = {
   apps: [
     new GraphQLApp(),
     // To create an initial user you can temporarily remove the authStrategy below
-    new AdminUIApp({ enableDefaultRoute: true, authStrategy }),
+    // new AdminUIApp({ enableDefaultRoute: true, authStrategy }),
+    new AdminUIApp(),
     new StaticApp({
-      path: '/client',
-      src: 'public',
+      path: '/',
+      src: 'client/build',
       fallback: 'index.html',
     }),
   ],

@@ -1,0 +1,13 @@
+# comment
+*/temp*
+*/*/temp*
+temp?
+
+*.md
+!README.md
+
+.git/
+docs/
+dist/
+.env.secret
+.env

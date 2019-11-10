@@ -36,6 +36,7 @@ function App() {
           Learn React
         </a>
       </header>
+			{console.log('deploy')}
     </div>
   );
 }
